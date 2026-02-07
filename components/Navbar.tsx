@@ -79,40 +79,40 @@ export default function Navbar() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-center h-16">
           <div className="flex items-center space-x-1">
             <a
               href="#about"
               onClick={(e) => handleLinkClick(e, "#about")}
-              className="px-3 py-2 rounded-md text-sm font-medium text-white/90 hover:text-white transition-colors cursor-pointer"
+              className="px-3 py-2 rounded-md text-base font-medium text-white/90 hover:text-white transition-all duration-300 hover:[filter:drop-shadow(0_0_10px_rgba(255,255,255,0.9))] cursor-pointer"
             >
               About Me
             </a>
             <a
               href="#experience"
               onClick={(e) => handleLinkClick(e, "#experience")}
-              className="px-3 py-2 rounded-md text-sm font-medium text-white/90 hover:text-white transition-colors cursor-pointer"
+              className="px-3 py-2 rounded-md text-base font-medium text-white/90 hover:text-white transition-all duration-300 hover:[filter:drop-shadow(0_0_10px_rgba(255,255,255,0.9))] cursor-pointer"
             >
               Experience
             </a>
             <a
               href="#projects"
               onClick={(e) => handleLinkClick(e, "#projects")}
-              className="px-3 py-2 rounded-md text-sm font-medium text-white/90 hover:text-white transition-colors cursor-pointer"
+              className="px-3 py-2 rounded-md text-base font-medium text-white/90 hover:text-white transition-all duration-300 hover:[filter:drop-shadow(0_0_10px_rgba(255,255,255,0.9))] cursor-pointer"
             >
               Projects
             </a>
             <a
               href="#contact"
               onClick={(e) => handleLinkClick(e, "#contact")}
-              className="px-3 py-2 rounded-md text-sm font-medium text-white/90 hover:text-white transition-colors cursor-pointer"
+              className="px-3 py-2 rounded-md text-base font-medium text-white/90 hover:text-white transition-all duration-300 hover:[filter:drop-shadow(0_0_10px_rgba(255,255,255,0.9))] cursor-pointer"
             >
               Contact
             </a>
             <a
               href="#resume"
               onClick={(e) => handleLinkClick(e, "#resume")}
-              className="px-3 py-2 rounded-md text-sm font-medium text-white/90 hover:text-white transition-colors cursor-pointer"
+              className="px-3 py-2 rounded-md text-base font-medium text-white/90 hover:text-white transition-all duration-300 hover:[filter:drop-shadow(0_0_10px_rgba(255,255,255,0.9))] cursor-pointer"
             >
               Resume/CV
             </a>
