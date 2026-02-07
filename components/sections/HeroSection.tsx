@@ -82,7 +82,7 @@ export default function HeroSection() {
 
       <div className="text-center relative z-10 px-4">
         <p
-          className="text-xl md:text-2xl mb-6 tracking-[0.2em] uppercase font-light"
+          className="text-base sm:text-xl md:text-2xl mb-6 tracking-[0.15em] sm:tracking-[0.2em] uppercase font-light"
           style={{
             background: "linear-gradient(90deg, #94a3b8, #e2e8f0, #93c5fd)",
             backgroundSize: "200% auto",
@@ -95,7 +95,7 @@ export default function HeroSection() {
           Welcome to my website
         </p>
         <h1
-          className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight"
+          className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight"
           style={{
             background:
               "linear-gradient(135deg, #f8fafc 0%, #e0f2fe 25%, #bae6fd 50%, #7dd3fc 75%, #38bdf8 100%)",

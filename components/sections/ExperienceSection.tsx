@@ -6,7 +6,7 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="relative min-h-screen flex items-center justify-center py-20 px-4"
+      className="relative min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-20 px-4"
     >
       <div
         className="relative w-full max-w-4xl rounded-2xl overflow-hidden"
@@ -16,7 +16,7 @@ export default function ExperienceSection() {
           boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
         }}
       >
-        <div className="p-8 md:p-12">
+        <div className="p-6 sm:p-8 md:p-12">
           <h2
             className="text-4xl md:text-5xl font-bold mb-12 text-center"
             style={{
@@ -42,7 +42,7 @@ export default function ExperienceSection() {
             />
 
             {experiences.map((exp, index) => (
-              <div key={index} className="relative flex gap-6 mb-8 last:mb-0 group">
+              <div key={index} className="relative flex gap-4 sm:gap-6 mb-6 sm:mb-8 last:mb-0 group">
                 {/* Circle node */}
                 <div className="relative z-10 flex-shrink-0">
                   <div
@@ -56,10 +56,10 @@ export default function ExperienceSection() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 pt-1 pb-4 pl-2">
-                  <span className="text-sky-400 font-mono text-sm">{exp.year}</span>
-                  <h3 className="text-xl font-semibold text-slate-200 mt-1 mb-2">{exp.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{exp.description}</p>
+                <div className="flex-1 pt-1 pb-4 pl-0 sm:pl-2 min-w-0">
+                  <span className="text-sky-400 font-mono text-xs sm:text-sm">{exp.year}</span>
+                  <h3 className="text-lg sm:text-xl font-semibold text-slate-200 mt-1 mb-2">{exp.title}</h3>
+                  <p className="text-slate-400 text-sm sm:text-base leading-relaxed">{exp.description}</p>
                 </div>
               </div>
             ))}

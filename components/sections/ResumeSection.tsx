@@ -20,7 +20,7 @@ export default function ResumeSection() {
   return (
     <section
       id="resume"
-      className="relative min-h-screen flex items-center justify-center py-20 px-4"
+      className="relative min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-20 px-4"
     >
       <div
         className="relative w-full max-w-4xl rounded-2xl overflow-hidden"
@@ -30,7 +30,7 @@ export default function ResumeSection() {
           boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
         }}
       >
-        <div className="p-12 md:p-16 text-center">
+        <div className="p-6 sm:p-8 md:p-12 lg:p-16 text-center">
           {/* Title */}
           <h2
             className="text-4xl md:text-5xl font-bold mb-4"
@@ -43,7 +43,7 @@ export default function ResumeSection() {
           >
             Resume / CV
           </h2>
-          <p className="text-slate-400 text-lg mb-12">
+          <p className="text-slate-400 text-base sm:text-lg mb-8 md:mb-12">
             Download my CV in your preferred language
           </p>
 
@@ -79,8 +79,7 @@ export default function ResumeSection() {
                     transition={{ delay: 0.1, duration: 0.4 }}
                     className="flex-1 flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-800/60 border-2 border-slate-600/50 text-slate-200 font-medium transition-all duration-300 hover:border-sky-500/70 hover:bg-sky-500/20 hover:text-white hover:shadow-[0_0_30px_rgba(56,189,248,0.2)]"
                   >
-                    <span className="text-lg">🇬🇧</span>
-                    <span>English</span>
+                    English
                   </motion.a>
                   <motion.a
                     href={resumeLinks.french}
@@ -91,8 +90,7 @@ export default function ResumeSection() {
                     transition={{ delay: 0.2, duration: 0.4 }}
                     className="flex-1 flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-800/60 border-2 border-slate-600/50 text-slate-200 font-medium transition-all duration-300 hover:border-sky-500/70 hover:bg-sky-500/20 hover:text-white hover:shadow-[0_0_30px_rgba(56,189,248,0.2)]"
                   >
-                    <span className="text-lg">🇫🇷</span>
-                    <span>French</span>
+                    French
                   </motion.a>
                 </motion.div>
               )}

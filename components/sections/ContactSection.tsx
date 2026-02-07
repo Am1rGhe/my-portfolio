@@ -58,7 +58,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen flex items-center justify-center py-20 px-4"
+      className="relative min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-20 px-4"
     >
       <div
         className="relative w-full max-w-4xl rounded-2xl overflow-hidden"
@@ -71,7 +71,7 @@ export default function ContactSection() {
         <div className="p-12 md:p-16 text-center">
           {/* Title */}
           <h2
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
             style={{
               background: "linear-gradient(135deg, #f8fafc 0%, #93c5fd 50%, #94a3b8 100%)",
               WebkitBackgroundClip: "text",
@@ -86,7 +86,7 @@ export default function ContactSection() {
           </p>
 
           {/* Contact links */}
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             {contactLinks.map((link) => {
               const isEmail = link.href.startsWith("mailto:");
               const emailAddress = isEmail ? link.href.replace("mailto:", "") : "";

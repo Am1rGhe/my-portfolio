@@ -26,7 +26,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative min-h-screen flex items-center justify-center py-20 px-4"
+      className="relative min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-20 px-4"
     >
       <div
         className="relative w-full max-w-6xl rounded-2xl overflow-hidden"
@@ -36,10 +36,10 @@ export default function ProjectsSection() {
           boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
         }}
       >
-        <div className="p-8 md:p-12">
+        <div className="p-6 sm:p-8 md:p-12">
           {/* Title */}
           <h2
-            className="text-4xl md:text-5xl font-bold mb-4 text-center"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center"
             style={{
               background: "linear-gradient(135deg, #f8fafc 0%, #93c5fd 50%, #94a3b8 100%)",
               WebkitBackgroundClip: "text",
@@ -61,7 +61,7 @@ export default function ProjectsSection() {
           </div>
 
           {/* project cards grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {displayProjects.map((project) => (
               <div
                 key={project.id}
@@ -84,7 +84,7 @@ export default function ProjectsSection() {
                   <p className="text-slate-400 text-sm leading-relaxed mb-5 line-clamp-2">{project.description}</p>
 
                   {/* Buttons */}
-                  <div className="flex items-center justify-between gap-3">
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 sm:gap-3">
                     <a
                       href={project.githubUrl}
                       target="_blank"

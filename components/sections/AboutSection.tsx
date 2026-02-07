@@ -7,7 +7,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center justify-center py-20 px-4"
+      className="relative min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-20 px-4"
     >
       <div
         className="relative w-full max-w-5xl rounded-2xl overflow-hidden"
@@ -19,11 +19,11 @@ export default function AboutSection() {
             "0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
         }}
       >
-        <div className="flex flex-col lg:flex-row items-center gap-12 p-8 md:p-12">
+        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12 p-6 sm:p-8 md:p-12">
           {/* Info */}
           <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
             <h2
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6"
               style={{
                 background:
                   "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #94a3b8 100%)",
@@ -66,7 +66,7 @@ export default function AboutSection() {
 
           {/* Picture in the right side */}
           <div className="flex-shrink-0 order-1 lg:order-2">
-            <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-2xl transition-all duration-500 cursor-pointer hover:shadow-[0_0_50px_rgba(147,197,253,0.6),0_0_100px_rgba(96,165,250,0.3)] hover:scale-[1.02] overflow-hidden bg-slate-700/30">
+            <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-2xl transition-all duration-500 cursor-pointer hover:shadow-[0_0_50px_rgba(147,197,253,0.6),0_0_100px_rgba(96,165,250,0.3)] hover:scale-[1.02] overflow-hidden bg-slate-700/30">
               {imgError ? (
                 <div className="w-full h-full flex items-center justify-center text-slate-400 text-5xl font-bold rounded-2xl">
                   AG
