@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { contactLinks } from "@/lib/contactData";
 
 function EmailIcon({ className }: { className?: string }) {
@@ -46,6 +47,14 @@ function getIcon(icon: ContactLink["icon"]) {
 }
 
 export default function ContactSection() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = async (email: string) => {
+    await navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <section
       id="contact"
@@ -78,18 +87,37 @@ export default function ContactSection() {
 
           {/* Contact links */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
-            {contactLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.href.startsWith("http") ? "_blank" : undefined}
-                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="group flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-slate-800/60 border border-slate-600/50 text-slate-200 font-medium transition-all duration-300 hover:border-sky-500/50 hover:bg-sky-500/20 hover:text-white hover:shadow-[0_0_30px_rgba(56,189,248,0.2)]"
-              >
-                {getIcon(link.icon)}
-                <span>{link.label}</span>
-              </a>
-            ))}
+            {contactLinks.map((link) => {
+              const isEmail = link.href.startsWith("mailto:");
+              const emailAddress = isEmail ? link.href.replace("mailto:", "") : "";
+
+              if (isEmail) {
+                return (
+                  <button
+                    key={link.label}
+                    type="button"
+                    onClick={() => handleCopyEmail(emailAddress)}
+                    className="group flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-slate-800/60 border border-slate-600/50 text-slate-200 font-medium transition-all duration-300 hover:border-sky-500/50 hover:bg-sky-500/20 hover:text-white hover:shadow-[0_0_30px_rgba(56,189,248,0.2)] cursor-pointer relative z-10"
+                  >
+                    {getIcon(link.icon)}
+                    <span className="text-sm sm:text-base">{copied ? "Copied" : emailAddress}</span>
+                  </button>
+                );
+              }
+
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-slate-800/60 border border-slate-600/50 text-slate-200 font-medium transition-all duration-300 hover:border-sky-500/50 hover:bg-sky-500/20 hover:text-white hover:shadow-[0_0_30px_rgba(56,189,248,0.2)] cursor-pointer relative z-10"
+                >
+                  {getIcon(link.icon)}
+                  <span>{link.label}</span>
+                </a>
+              );
+            })}
           </div>
 
           {/* Decorative line */}
