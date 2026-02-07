@@ -121,7 +121,7 @@ export default function Navbar() {
               onClick={(e) => handleLinkClick(e, "#resume")}
               className="px-3 py-2 rounded-md text-base font-medium text-white/90 hover:text-white transition-all duration-300 hover:[filter:drop-shadow(0_0_10px_rgba(255,255,255,0.9))] cursor-pointer"
             >
-              Resume/CV
+              CV
             </a>
           </div>
         </div>

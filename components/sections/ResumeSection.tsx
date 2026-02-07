@@ -44,7 +44,7 @@ export default function ResumeSection() {
             Resume / CV
           </h2>
           <p className="text-slate-400 text-lg mb-12">
-            Download my resume in your preferred language
+            Download my CV in your preferred language
           </p>
 
           {/* Download button(s) */}
