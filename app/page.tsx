@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Background from "@/components/Background";
+import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
@@ -13,6 +14,7 @@ export default function Home() {
       
       <div className="relative z-10">
         <Navbar />
+        <HeroSection />
         <AboutSection />
         <ExperienceSection />
         <ProjectsSection />
