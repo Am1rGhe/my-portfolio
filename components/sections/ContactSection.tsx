@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { contactLinks } from "@/lib/contactData";
+import { contactLinks, type ContactLink } from "@/lib/contactData";
 
 function EmailIcon({ className }: { className?: string }) {
   return (
