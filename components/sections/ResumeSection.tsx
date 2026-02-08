@@ -41,13 +41,13 @@ export default function ResumeSection() {
               backgroundClip: "text",
             }}
           >
-            Resume / CV
+            CV
           </h2>
           <p className="text-slate-400 text-base sm:text-lg mb-8 md:mb-12">
             Download my CV in your preferred language
           </p>
 
-          {/* Download button(s) */}
+          {/* Download button */}
           <div className="flex flex-col items-center gap-4 min-h-[120px]">
             <AnimatePresence mode="wait">
               {!isExpanded ? (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { contactLinks, type ContactLink } from "@/lib/contactData";
+import { contactLinks } from "@/lib/contactData";
 
 function EmailIcon({ className }: { className?: string }) {
   return (
@@ -36,7 +36,7 @@ function TwitterIcon({ className }: { className?: string }) {
   );
 }
 
-function getIcon(icon: ContactLink["icon"]) {
+function getIcon(icon: "email" | "github" | "linkedin" | "twitter") {
   const iconClass = "w-6 h-6 flex-shrink-0";
   switch (icon) {
     case "email": return <EmailIcon className={iconClass} />;
