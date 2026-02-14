@@ -50,7 +50,7 @@ export default function HeroSection() {
       {showMeteor && (
         <div
           key={meteorKey}
-          className="fixed inset-0 pointer-events-none z-[100] overflow-visible"
+          className="fixed inset-0 pointer-events-none z-[100] overflow-hidden"
         >
           <div
             className="absolute origin-center"

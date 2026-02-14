@@ -10,7 +10,7 @@ import ResumeSection from "@/components/sections/ResumeSection";
 
 export default function Home() {
   return (
-    <div className="relative w-screen min-h-screen overflow-x-hidden">
+    <div className="relative w-full min-w-0 min-h-screen overflow-x-hidden">
       <Background />
       
       <div className="relative z-10">
