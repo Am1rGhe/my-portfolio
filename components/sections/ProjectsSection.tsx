@@ -54,7 +54,7 @@ function ComingSoonCard() {
             In development
           </span>
           <span className="text-red-300/90 text-sm font-medium">
-            Release: 1st March 2026 at 14:00
+            Release: 7th March 2026 at 14:00
           </span>
         </div>
       </div>
