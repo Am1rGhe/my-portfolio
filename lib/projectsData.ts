@@ -19,6 +19,15 @@ export const projects: Project[] = [
     highlighted: true,
   },
   {
+    id: "dydy",
+    title: "Dydy Custom",
+    description: "Full-stack fashion e-commerce website for custom-designed clothing. Built with Next.js and Tailwind CSS. One-stop shop for unique styles—Shop, About, Contact, and user authentication. Real-world startup project deployed on Vercel.",
+    image: "/images/projects/dydycustom.png",
+    githubUrl: "https://github.com/Am1rGhe/dydy-custom",
+    demoUrl: "https://dydy-custom-6kj8.vercel.app/",
+    highlighted: true,
+  },
+  {
     id: "2",
     title: "Sprindo – Gestion de Projet Agile",
     description: "A full-stack web application for managing agile projects, sprints, tasks, and team members. Developed the Java backend with Maven integration, CI/CD pipeline, and comprehensive test coverage. Built the React frontend with modern UI components and integrated it with the backend. A teammate handled the Spring Boot framework integration to connect both layers. Features include project creation, sprint planning, task assignment, and real-time statistics tracking.",
