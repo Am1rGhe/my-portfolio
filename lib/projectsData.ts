@@ -28,12 +28,21 @@ export const projects: Project[] = [
     highlighted: true,
   },
   {
+    id: "8",
+    title: "Gmail Agent",
+    description: "A Next.js app that helps you handle your inbox faster. Sign in with Google OAuth, view emails in one place, and generate AI-powered replies with Gemini (Professional, Casual, or Friendly tone). Send replies directly via Gmail API. Built with Next.js 16, NextAuth, Prisma (PostgreSQL), Google Gemini, and Tailwind CSS.",
+    image: "/images/projects/gmail-ai-agent.png",
+    githubUrl: "https://github.com/Am1rGhe/gmail-ai-agent",
+    demoUrl: "https://gmail-ai-agent-app.vercel.app/",
+    highlighted: true,
+  },
+  {
     id: "2",
     title: "Sprindo – Gestion de Projet Agile",
     description: "A full-stack web application for managing agile projects, sprints, tasks, and team members. Developed the Java backend with Maven integration, CI/CD pipeline, and comprehensive test coverage. Built the React frontend with modern UI components and integrated it with the backend. A teammate handled the Spring Boot framework integration to connect both layers. Features include project creation, sprint planning, task assignment, and real-time statistics tracking.",
     image: "/images/projects/codyssey-sprindo.png",
     demoUrl: "https://sprindo-codyssey.vercel.app/",
-    highlighted: true,
+    highlighted: false,
   },
   {
     id: "3",
