@@ -28,13 +28,22 @@ export const projects: Project[] = [
     highlighted: true,
   },
   {
+    id: "explain-repo",
+    title: "Explain My Repo",
+    description: "Paste any GitHub repo URL and chat with an AI (Google Gemini) that reads the code for you. Ask what the project does, how a feature works, or how to get started—no clone needed. Normal mode: one-off chat per session. Auth mode: sign in with GitHub to save and search chat history. Built with Next.js 16, NextAuth, Prisma (PostgreSQL), and Tailwind. ChatGPT-style UI with Markdown rendering.",
+    image: "/images/projects/explain-my-repo.png",
+    githubUrl: "https://github.com/Am1rGhe/explain-my-repo-web-app",
+    demoUrl: "https://explain-my-repo-web-app.vercel.app/",
+    highlighted: true,
+  },
+  {
     id: "8",
     title: "Gmail Agent",
     description: "A Next.js app that helps you handle your inbox faster. Sign in with Google OAuth, view emails in one place, and generate AI-powered replies with Gemini (Professional, Casual, or Friendly tone). Send replies directly via Gmail API. Built with Next.js 16, NextAuth, Prisma (PostgreSQL), Google Gemini, and Tailwind CSS.",
     image: "/images/projects/gmail-ai-agent.png",
     githubUrl: "https://github.com/Am1rGhe/gmail-ai-agent",
     demoUrl: "https://gmail-ai-agent-app.vercel.app/",
-    highlighted: true,
+    highlighted: false,
   },
   {
     id: "2",
