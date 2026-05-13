@@ -6,7 +6,13 @@ export interface Experience {
 }
 
 export const experiences: Experience[] = [
-  
+  {
+    year: "May 2026 — Present",
+    title: "Full-Stack Developer Intern — Galeries L'Original (Next.js)",
+    description:
+      "Building production Next.js for Montreal's Galeries L'Original: the custom art product at https://www.artur.art/fr/home (live previews, personalization, and checkout) and the flagship marketplace at https://www.loriginal.org/fr (artist discovery, PickArt, murals, and originals). Ship App Router UI, server-side data and integrations, and TypeScript-safe flows in a bilingual FR experience; tune performance, accessibility, and SEO so online journeys match what visitors expect from the Vieux-Port and Plateau galleries.",
+    date: "Present",
+  },
   { year: "February 2026", title: "Conference Volunteer ConFoo Montréal", description: "Volunteered at ConFoo, a major software development conference, assisting with event setup, technical checks, and on-site coordination to ensure sessions and equipment ran smoothly for speakers and attendees.", date: "2026" },
   { year: "January 2026 to April 2026", title: "Full-Stack Developer Fashion E-commerce Startup", description: "Currently leading the ongoing development and maintenance of the startup’s e-commerce platform, working across the frontend, backend logic, and database integration. Responsible for continuously improving features, performance, and overall user experience to support online sales and brand growth.", date: "Present" },
   { year: "23 December 2025", title: "Database Tutor SQL & Relational Databases", description: "Led a complete end-to-end revision program covering SQL and relational database concepts (from A to Z) using Oracle Database, helping students prepare for exams through structured explanations, practice exercises, and project-oriented examples.", date: "Present" },
