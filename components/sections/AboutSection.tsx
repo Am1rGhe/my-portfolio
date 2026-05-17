@@ -35,32 +35,59 @@ export default function AboutSection() {
               About Me
             </h2>
             <p className="text-lg text-slate-300 leading-relaxed mb-4">
-              I&apos;m a software engineering student at UQAM focused on
-              full-stack development and DevOps. I enjoy building complete
-              applications, from user-friendly interfaces to backend systems,
-              and ensuring they are reliable, scalable, and production-ready.
-            </p>
-            <p className="text-lg text-slate-300 leading-relaxed mb-4">
-              I&apos;m driven by understanding software end-to-end: how features
-              are built, how data flows, and how applications are deployed and
-              maintained. I value clean architecture, maintainable code, and
-              automation, and I&apos;m continuously improving my engineering
-              skills.
-            </p>
-            <p className="text-lg text-slate-300 leading-relaxed mb-4">
-              <span className="font-semibold text-slate-200">
-                Current Focus:
+              I&apos;m a{" "}
+              <span className="font-semibold text-slate-100">full-stack developer</span>{" "}
+              and software engineering student at{" "}
+              <span className="font-semibold text-sky-300">UQAM</span>, currently
+              building{" "}
+              <span className="font-semibold text-slate-100">
+                production-grade applications
               </span>{" "}
-              I&apos;m deepening my backend skills by working with Next.js
-              server-side features, APIs, and database-driven architectures.
-              With experience using PostgreSQL and tools like Supabase, I&apos;m
-              focusing on strengthening backend logic, authentication flows, and
-              data handling to build more robust full-stack systems.
+              used by real customers. At{" "}
+              <span className="font-semibold text-sky-300">Galeries L&apos;Original</span>
+              , I ship features for two live platforms — a custom art product and
+              a marketplace serving Montréal&apos;s{" "}
+              <span className="font-semibold text-slate-100">Vieux-Port</span> and{" "}
+              <span className="font-semibold text-slate-100">Plateau</span> galleries
+              — working across{" "}
+              <span className="font-semibold text-sky-300">Next.js App Router</span>
+              , server-side data flows, and TypeScript-safe integrations.
             </p>
-            <p className="text-slate-400 leading-relaxed">
-              Outside of development, I enjoy hiking and camping, which reflect
-              my approach to both life and engineering: patience, adaptability,
-              and long-term growth.
+            <p className="text-lg text-slate-300 leading-relaxed mb-4">
+              I approach software{" "}
+              <span className="font-semibold text-slate-100">end-to-end</span>: from
+              crafting interfaces people actually enjoy using, to designing the
+              backend logic and data architecture that keeps things running
+              reliably. I care about{" "}
+              <span className="font-semibold text-slate-100">clean code</span>,{" "}
+              <span className="font-semibold text-slate-100">maintainability</span>
+              , and shipping things that work in{" "}
+              <span className="font-semibold text-sky-300">production</span> — not
+              just in development.
+            </p>
+            <p className="text-lg text-slate-300 leading-relaxed mb-6">
+              Beyond code, I co-founded{" "}
+              <span className="font-semibold text-sky-300">Codyssey</span> — an
+              educational initiative inside Algeria&apos;s largest IT club — and have
+              tutored peers in databases, web fundamentals, and helped organize a
+              hackathon for new CS students at UQAM.
+            </p>
+            <p
+              className="text-slate-300 leading-relaxed pl-4 border-l-2 border-sky-400/50 italic"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(56, 189, 248, 0.06) 0%, transparent 100%)",
+              }}
+            >
+              When I&apos;m away from the keyboard, you&apos;ll find me{" "}
+              <span className="font-semibold text-slate-100 not-italic">hiking</span>{" "}
+              — which teaches the same things good engineering does:{" "}
+              <span className="font-semibold text-sky-300">patience</span>,{" "}
+              <span className="font-semibold text-sky-300">adaptability</span>, and{" "}
+              <span className="font-semibold text-sky-300">
+                thinking a few steps ahead
+              </span>
+              .
             </p>
           </div>
 
