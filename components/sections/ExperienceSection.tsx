@@ -1,6 +1,80 @@
 "use client";
 
-import { experiences } from "@/lib/experienceData";
+import type { ReactNode } from "react";
+import {
+  experiences,
+  type Experience,
+  type ExperienceLink,
+} from "@/lib/experienceData";
+
+function renderDescriptionWithLinks(
+  description: string,
+  links?: ExperienceLink[]
+): ReactNode {
+  if (!links?.length) return description;
+
+  type Part =
+    | { type: "text"; value: string }
+    | { type: "link"; link: ExperienceLink };
+
+  let parts: Part[] = [{ type: "text", value: description }];
+
+  for (const link of links) {
+    const needle = `(${link.label})`;
+    const next: Part[] = [];
+
+    for (const part of parts) {
+      if (part.type === "link") {
+        next.push(part);
+        continue;
+      }
+
+      const index = part.value.indexOf(needle);
+      if (index === -1) {
+        next.push(part);
+        continue;
+      }
+
+      if (index > 0) {
+        next.push({ type: "text", value: part.value.slice(0, index) });
+      }
+      next.push({ type: "link", link });
+      const after = part.value.slice(index + needle.length);
+      if (after) {
+        next.push({ type: "text", value: after });
+      }
+    }
+
+    parts = next;
+  }
+
+  return parts.map((part, index) =>
+    part.type === "text" ? (
+      part.value
+    ) : (
+      <span key={`${part.link.href}-${index}`}>
+        (
+        <a
+          href={part.link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sky-400 hover:text-sky-300 underline underline-offset-2 transition-colors"
+        >
+          {part.link.label}
+        </a>
+        )
+      </span>
+    )
+  );
+}
+
+function ExperienceDescription({ exp }: { exp: Experience }) {
+  return (
+    <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+      {renderDescriptionWithLinks(exp.description, exp.links)}
+    </p>
+  );
+}
 
 export default function ExperienceSection() {
   return (
@@ -59,7 +133,7 @@ export default function ExperienceSection() {
                 <div className="flex-1 pt-1 pb-4 pl-0 sm:pl-2 min-w-0">
                   <span className="text-sky-400 font-mono text-xs sm:text-sm">{exp.year}</span>
                   <h3 className="text-lg sm:text-xl font-semibold text-slate-200 mt-1 mb-2">{exp.title}</h3>
-                  <p className="text-slate-400 text-sm sm:text-base leading-relaxed">{exp.description}</p>
+                  <ExperienceDescription exp={exp} />
                 </div>
               </div>
             ))}
