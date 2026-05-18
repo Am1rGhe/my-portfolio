@@ -65,6 +65,18 @@ export default function AboutSection() {
               <span className="font-semibold text-sky-300">production</span> — not
               just in development.
             </p>
+            <p className="text-lg text-slate-300 leading-relaxed mb-4">
+              I&apos;m also comfortable working with{" "}
+              <span className="font-semibold text-slate-100">
+                AI-assisted development tools
+              </span>{" "}
+              (
+              <span className="font-semibold text-sky-300">Cursor</span>,{" "}
+              <span className="font-semibold text-sky-300">Claude</span>) to
+              accelerate delivery while maintaining{" "}
+              <span className="font-semibold text-slate-100">code quality</span>
+              .
+            </p>
             <p className="text-lg text-slate-300 leading-relaxed mb-6">
               Beyond code, I co-founded{" "}
               <span className="font-semibold text-sky-300">Codyssey</span> — an

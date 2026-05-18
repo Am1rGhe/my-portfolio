@@ -10,7 +10,7 @@ export const experiences: Experience[] = [
     year: "May 2026 — Present",
     title: "Full-Stack Developer Intern — Galeries L'Original (Next.js)",
     description:
-      "Building production Next.js for Montreal's Galeries L'Original: the custom art product at https://www.artur.art/fr/home (live previews, personalization, and checkout) and the flagship marketplace at https://www.loriginal.org/fr (artist discovery, PickArt, murals, and originals). Ship App Router UI, server-side data and integrations, and TypeScript-safe flows in a bilingual FR experience; tune performance, accessibility, and SEO so online journeys match what visitors expect from the Vieux-Port and Plateau galleries.",
+      "Contributing to two production platforms serving Montréal's art community: a custom art product (artur.art) with live previews and personalization, and a flagship marketplace (loriginal.org) covering artist discovery, murals, and originals. Working across Next.js App Router, TypeScript, and server-side integrations — shipping UI improvements, resolving bugs blocking real users, and maintaining a bilingual FR/EN experience optimized for performance, accessibility, and SEO.",
     date: "Present",
   },
   { year: "February 2026", title: "Conference Volunteer ConFoo Montréal", description: "Volunteered at ConFoo, a major software development conference, assisting with event setup, technical checks, and on-site coordination to ensure sessions and equipment ran smoothly for speakers and attendees.", date: "2026" },
