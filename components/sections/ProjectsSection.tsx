@@ -64,8 +64,13 @@ function ComingSoonCard() {
 
 function ProjectCard({ project, isExpanded, onToggle }: { project: Project; isExpanded: boolean; onToggle: () => void }) {
   const [imgError, setImgError] = useState(false);
-  const needsExpand = project.description.length > 120;
-  const displayText = isExpanded ? project.description : needsExpand ? project.description.slice(0, 120).trim() + "..." : project.description;
+  const previewLength = 200;
+  const needsExpand = project.description.length > previewLength;
+  const displayText = isExpanded
+    ? project.description
+    : needsExpand
+      ? project.description.slice(0, previewLength).trim() + "…"
+      : project.description;
 
   return (
     <div
