@@ -46,11 +46,11 @@ export const experiences: Experience[] = [
     date: "2025",
   },
   {
-    year: "March 2026",
+    year: "March 2025",
     title: "Hackathon Co-organizer — New CS Students Initiative (UQAM)",
     description:
       "Helped organize a hackathon for incoming computer science students at UQAM, contributing to logistics, participant coordination, and creating a welcoming environment for first-year students getting into tech.",
-    date: "2026",
+    date: "2025",
   },
   {
     year: "March 2025",
