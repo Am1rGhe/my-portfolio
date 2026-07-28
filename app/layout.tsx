@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Amir Ghouari | Software Engineer",
-  description: "Portfolio of Amir Ghouari — Full-stack developer and software engineering student at UQAM. Explore my projects, skills, and experience in web development and DevOps.",
+  description: "Portfolio of Amir Ghouari — Full-stack developer and software engineering student at UQAM. Explore my projects, skills, and experience in web development.",
   icons: {
     icon: "/favicon.svg",
   },
