@@ -7,6 +7,8 @@ import { useTranslation } from "@/lib/i18n/LanguageProvider";
 /** Flight distance as fractions of the viewport (same values used for path + angle). */
 const FLIGHT_DX_RATIO = -1.2;
 const FLIGHT_DY_RATIO = -0.8;
+/** Extra tilt so the nose sits a bit more to the left of the flight path. */
+const ROTATION_NUDGE_DEG = -20;
 
 type RocketFlight = {
   dx: string;
@@ -18,7 +20,8 @@ function getRocketFlight(): RocketFlight {
   const dxPx = FLIGHT_DX_RATIO * window.innerWidth;
   const dyPx = FLIGHT_DY_RATIO * window.innerHeight;
   // Rocket art points up; mirrored so the nose tracks this exact pixel path.
-  const rotation = (-Math.atan2(-dxPx, -dyPx) * 180) / Math.PI;
+  const rotation =
+    (-Math.atan2(-dxPx, -dyPx) * 180) / Math.PI + ROTATION_NUDGE_DEG;
 
   return {
     dx: `${dxPx}px`,
