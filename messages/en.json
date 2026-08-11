@@ -329,5 +329,18 @@
     "english": "English",
     "french": "French",
     "back": "← Back"
+  },
+  "nav": {
+    "about": "About Me",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "CV",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "navigationMenu": "Navigation menu",
+    "language": "Language"
   }
 }

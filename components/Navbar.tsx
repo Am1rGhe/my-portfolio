@@ -2,18 +2,21 @@
 
 import { useEffect, useState, useMemo } from "react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 const STAR_COUNT = 25;
-const navLinks = [
-  { href: "#about", label: "About Me" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-  { href: "#resume", label: "CV" },
-];
+
+const navLinkKeys = [
+  { href: "#about", key: "about" },
+  { href: "#skills", key: "skills" },
+  { href: "#experience", key: "experience" },
+  { href: "#projects", key: "projects" },
+  { href: "#contact", key: "contact" },
+  { href: "#resume", key: "resume" },
+] as const;
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -112,14 +115,14 @@ export default function Navbar() {
 
             <div className="hidden md:flex items-center justify-center flex-1 gap-4">
               <div className="flex items-center space-x-1">
-                {navLinks.map((link) => (
+                {navLinkKeys.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleLinkClick(e, link.href)}
                     className="px-3 py-2 rounded-md text-base font-medium text-white/90 hover:text-white transition-all duration-300 hover:[filter:drop-shadow(0_0_10px_rgba(255,255,255,0.9))] cursor-pointer"
                   >
-                    {link.label}
+                    {t.nav[link.key]}
                   </a>
                 ))}
               </div>
@@ -132,7 +135,7 @@ export default function Navbar() {
                 type="button"
                 onClick={() => setMobileMenuOpen((open) => !open)}
                 className="relative z-20 p-2 rounded-lg text-white/90 hover:text-white hover:bg-white/10 transition-colors"
-                aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+                aria-label={mobileMenuOpen ? t.nav.closeMenu : t.nav.openMenu}
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-sidebar"
               >
@@ -160,7 +163,7 @@ export default function Navbar() {
           type="button"
           className="absolute inset-0 bg-slate-950/70 backdrop-blur-sm"
           onClick={() => setMobileMenuOpen(false)}
-          aria-label="Close menu"
+          aria-label={t.nav.closeMenu}
           tabIndex={mobileMenuOpen ? 0 : -1}
         />
 
@@ -168,18 +171,18 @@ export default function Navbar() {
           id="mobile-sidebar"
           role="dialog"
           aria-modal="true"
-          aria-label="Navigation menu"
+          aria-label={t.nav.navigationMenu}
           className={`absolute top-0 right-0 h-full w-[min(18rem,85vw)] bg-slate-900/95 backdrop-blur-md border-l border-white/10 shadow-2xl shadow-slate-950/80 flex flex-col transition-transform duration-300 ease-out ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
-            <span className="text-lg font-semibold text-white">Menu</span>
+            <span className="text-lg font-semibold text-white">{t.nav.menu}</span>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
               className="p-2 rounded-lg text-white/90 hover:text-white hover:bg-white/10 transition-colors"
-              aria-label="Close menu"
+              aria-label={t.nav.closeMenu}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -188,14 +191,14 @@ export default function Navbar() {
           </div>
 
           <nav className="flex flex-col gap-1 p-4 overflow-y-auto">
-            {navLinks.map((link) => (
+            {navLinkKeys.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
                 className="px-4 py-3 rounded-lg text-base font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
               >
-                {link.label}
+                {t.nav[link.key]}
               </a>
             ))}
           </nav>

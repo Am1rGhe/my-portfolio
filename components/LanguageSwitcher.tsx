@@ -4,13 +4,13 @@ import { localeLabels, locales, type Locale } from "@/lib/i18n/config";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 export default function LanguageSwitcher() {
-  const { locale, setLocale } = useTranslation();
+  const { locale, setLocale, t } = useTranslation();
 
   return (
     <div
       className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 p-0.5"
       role="group"
-      aria-label="Language"
+      aria-label={t.nav.language}
     >
       {locales.map((code: Locale) => {
         const isActive = locale === code;
