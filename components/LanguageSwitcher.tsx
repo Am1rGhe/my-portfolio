@@ -1,10 +1,27 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
 import { localeLabels, locales, type Locale } from "@/lib/i18n/config";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 export default function LanguageSwitcher() {
-  const { locale, setLocale, t } = useTranslation();
+  const { t } = useTranslation();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const segments = pathname.split("/");
+  const currentLocale = (locales as readonly string[]).includes(segments[1] ?? "")
+    ? (segments[1] as Locale)
+    : null;
+
+  const switchLocale = (next: Locale) => {
+    if (!currentLocale || currentLocale === next) return;
+
+    const rest = segments.slice(2).join("/");
+    const nextPath = rest ? `/${next}/${rest}` : `/${next}`;
+    const hash = typeof window !== "undefined" ? window.location.hash : "";
+    router.push(`${nextPath}${hash}`);
+  };
 
   return (
     <div
@@ -13,12 +30,12 @@ export default function LanguageSwitcher() {
       aria-label={t.nav.language}
     >
       {locales.map((code: Locale) => {
-        const isActive = locale === code;
+        const isActive = currentLocale === code;
         return (
           <button
             key={code}
             type="button"
-            onClick={() => setLocale(code)}
+            onClick={() => switchLocale(code)}
             className={`px-2.5 py-1 text-xs font-semibold tracking-wide transition-colors ${
               isActive
                 ? "rounded-md bg-white/15 text-white"
