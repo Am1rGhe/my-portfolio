@@ -315,5 +315,11 @@
         "description": "A developer tool that transforms any public GitHub repository into an interactive, conversational knowledge base — simply paste a URL and ask Google's Gemini what the codebase does, how a specific feature works, or where to start as a new contributor. No local clone is required: the application fetches and processes repository context server-side, making onboarding and code exploration dramatically faster. Two modes serve different needs — anonymous users get focused one-off sessions for quick questions, while GitHub OAuth unlocks persistent chat history with search across past analyses. Built with Next.js 16, NextAuth, Prisma on PostgreSQL, and a ChatGPT-style interface with full Markdown rendering, it showcases AI integration, secure authentication, and polished developer UX in a tool built for real workflows."
       }
     }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "I'm always open to new opportunities and interesting conversations. Feel free to reach out.",
+    "copied": "Copied",
+    "footer": "Let's connect"
   }
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { contactLinks } from "@/lib/contactData";
+import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 function EmailIcon({ className }: { className?: string }) {
   return (
@@ -47,6 +48,7 @@ function getIcon(icon: "email" | "github" | "linkedin" | "twitter") {
 }
 
 export default function ContactSection() {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = async (email: string) => {
@@ -79,10 +81,10 @@ export default function ContactSection() {
               backgroundClip: "text",
             }}
           >
-            Get in Touch
+            {t.contact.title}
           </h2>
           <p className="text-slate-400 text-lg mb-12 max-w-xl mx-auto">
-            I&apos;m always open to new opportunities and interesting conversations. Feel free to reach out.
+            {t.contact.subtitle}
           </p>
 
           {/* Contact links */}
@@ -100,7 +102,7 @@ export default function ContactSection() {
                     className="group flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-slate-800/60 border border-slate-600/50 text-slate-200 font-medium transition-all duration-300 hover:border-sky-500/50 hover:bg-sky-500/20 hover:text-white hover:shadow-[0_0_30px_rgba(56,189,248,0.2)] cursor-pointer relative z-10"
                   >
                     {getIcon(link.icon)}
-                    <span className="text-sm sm:text-base">{copied ? "Copied" : emailAddress}</span>
+                    <span className="text-sm sm:text-base">{copied ? t.contact.copied : emailAddress}</span>
                   </button>
                 );
               }
@@ -125,7 +127,7 @@ export default function ContactSection() {
             className="mt-12 mx-auto w-24 h-0.5 rounded-full"
             style={{ background: "linear-gradient(90deg, transparent, rgba(147, 197, 253, 0.5), transparent)" }}
           />
-          <p className="mt-6 text-slate-500 text-sm">Let&apos;s connect</p>
+          <p className="mt-6 text-slate-500 text-sm">{t.contact.footer}</p>
         </div>
       </div>
     </section>

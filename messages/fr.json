@@ -315,5 +315,11 @@
         "description": "Un outil pour développeurs qui transforme n'importe quel dépôt GitHub public en base de connaissances interactive et conversationnelle — il suffit de coller une URL et de demander à Google Gemini ce que fait le code, comment une fonctionnalité spécifique fonctionne, ou par où commencer en tant que nouveau contributeur. Aucun clone local n'est requis : l'application récupère et traite le contexte du dépôt côté serveur, rendant l'onboarding et l'exploration du code nettement plus rapides. Deux modes répondent à des besoins différents — les utilisateurs anonymes bénéficient de sessions ponctuelles pour des questions rapides, tandis que GitHub OAuth débloque un historique de chat persistant avec recherche dans les analyses passées. Construit avec Next.js 16, NextAuth, Prisma sur PostgreSQL, et une interface style ChatGPT avec rendu Markdown complet, il illustre l'intégration de l'IA, l'authentification sécurisée et une UX développeur soignée dans un outil conçu pour de vrais workflows."
       }
     }
+  },
+  "contact": {
+    "title": "Me contacter",
+    "subtitle": "Je suis toujours ouvert aux nouvelles opportunités et aux discussions intéressantes. N'hésitez pas à me écrire.",
+    "copied": "Copié",
+    "footer": "Restons en contact"
   }
 }
