@@ -1,33 +1,49 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
-/** Match CSS meteorShoot path: translate(-120vw, -80vh) */
-const FLIGHT_DX_VW = -120;
-const FLIGHT_DY_VH = -80;
+/** Flight distance as fractions of the viewport (same values used for path + angle). */
+const FLIGHT_DX_RATIO = -1.2;
+const FLIGHT_DY_RATIO = -0.8;
 
-function getFlightRotationDeg() {
-  const dx = (FLIGHT_DX_VW / 100) * window.innerWidth;
-  const dy = (FLIGHT_DY_VH / 100) * window.innerHeight;
-  // Rocket art points up; mirror the path angle so the nose tracks the flight.
-  return (-Math.atan2(-dx, -dy) * 180) / Math.PI;
+type RocketFlight = {
+  dx: string;
+  dy: string;
+  rotation: number;
+};
+
+function getRocketFlight(): RocketFlight {
+  const dxPx = FLIGHT_DX_RATIO * window.innerWidth;
+  const dyPx = FLIGHT_DY_RATIO * window.innerHeight;
+  // Rocket art points up; mirrored so the nose tracks this exact pixel path.
+  const rotation = (-Math.atan2(-dxPx, -dyPx) * 180) / Math.PI;
+
+  return {
+    dx: `${dxPx}px`,
+    dy: `${dyPx}px`,
+    rotation,
+  };
 }
 
 export default function HeroSection() {
   const { t } = useTranslation();
   const [showRocket, setShowRocket] = useState(false);
   const [rocketKey, setRocketKey] = useState(0);
-  const [flightRotation, setFlightRotation] = useState(45);
+  const [flight, setFlight] = useState<RocketFlight>({
+    dx: "-120vw",
+    dy: "-80vh",
+    rotation: -45,
+  });
   const sectionRef = useRef<HTMLElement>(null);
   const hasTriggeredRef = useRef(false);
 
   useEffect(() => {
-    const updateRotation = () => setFlightRotation(getFlightRotationDeg());
-    updateRotation();
-    window.addEventListener("resize", updateRotation);
-    return () => window.removeEventListener("resize", updateRotation);
+    const updateFlight = () => setFlight(getRocketFlight());
+    updateFlight();
+    window.addEventListener("resize", updateFlight);
+    return () => window.removeEventListener("resize", updateFlight);
   }, []);
 
   useEffect(() => {
@@ -45,7 +61,7 @@ export default function HeroSection() {
         sectionBottom > viewportHeight * 0.2
       ) {
         hasTriggeredRef.current = true;
-        setFlightRotation(getFlightRotationDeg());
+        setFlight(getRocketFlight());
         setShowRocket(true);
         setRocketKey((k) => k + 1);
 
@@ -63,6 +79,16 @@ export default function HeroSection() {
     };
   }, []);
 
+  const rocketTravelStyle = {
+    top: "75%",
+    left: "105%",
+    width: "120px",
+    height: "120px",
+    animation: "meteorShoot 1.8s ease-out forwards",
+    ["--rocket-dx" as string]: flight.dx,
+    ["--rocket-dy" as string]: flight.dy,
+  } as CSSProperties;
+
   return (
     <section
       ref={sectionRef}
@@ -75,21 +101,12 @@ export default function HeroSection() {
           className="fixed inset-0 pointer-events-none z-[100] overflow-hidden"
           aria-hidden
         >
-          <div
-            className="absolute"
-            style={{
-              top: "75%",
-              left: "105%",
-              width: "120px",
-              height: "120px",
-              animation: "meteorShoot 1.8s ease-out forwards",
-            }}
-          >
+          <div className="absolute" style={rocketTravelStyle}>
             <div
               style={{
                 width: "100%",
                 height: "100%",
-                transform: `rotate(${flightRotation}deg)`,
+                transform: `rotate(${flight.rotation}deg)`,
               }}
             >
               <DotLottieReact
