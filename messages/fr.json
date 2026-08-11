@@ -73,5 +73,50 @@
       "devops": "DevOps",
       "systems": "Systèmes & Langages"
     }
+  },
+  "experience": {
+    "title": "Expérience",
+    "items": {
+      "galeries": {
+        "year": "Mai 2026 — Présent",
+        "title": "Stagiaire développeur full-stack — Galeries L'Original (Next.js)",
+        "description": "Contribution à deux plateformes en production au service de la communauté artistique de Montréal : un produit d'art sur mesure (artur.art) avec aperçus en direct et personnalisation, et une marketplace phare (loriginal.org) couvrant la découverte d'artistes, les murales et les originaux. Travail sur Next.js App Router, TypeScript et intégrations côté serveur — livraison d'améliorations UI, résolution de bugs bloquant de vrais utilisateurs, et maintien d'une expérience bilingue FR/EN optimisée pour la performance, l'accessibilité et le SEO."
+      },
+      "confoo": {
+        "year": "Février 2026",
+        "title": "Bénévole — Conférence ConFoo Montréal",
+        "description": "Bénévolat à ConFoo, une grande conférence de développement logiciel, en participant à l'installation de l'événement, aux vérifications techniques et à la coordination sur place pour assurer le bon déroulement des sessions et du matériel pour les conférenciers et les participants."
+      },
+      "dave": {
+        "year": "Janvier 2026 — Avril 2026",
+        "title": "Développeur full-stack freelance — Plateforme e-commerce pour M. Dave",
+        "description": "Conception et réalisation d'une plateforme e-commerce de mode entièrement sur mesure pour un client indépendant. Gestion solo du cycle de vie complet du projet — du recueil des besoins et du design UI à la logique backend, l'intégration de la base de données et le déploiement. Livraison d'un site en production avec de vrais clients payants, construit avec Next.js, Tailwind CSS et Supabase."
+      },
+      "database-instructor": {
+        "year": "Décembre 2025",
+        "title": "Instructeur en bases de données — SQL & bases relationnelles",
+        "description": "Conception et animation d'un programme de révision en ligne multi-sessions en SQL et bases de données relationnelles pour un groupe d'environ 20 étudiants, couvrant les concepts fondamentaux via Oracle Database. Sessions structurées autour de la préparation aux examens avec exercices progressifs et exemples orientés projets, en adaptant les explications en temps réel à un public à distance."
+      },
+      "programming-instructor": {
+        "year": "Septembre 2025",
+        "title": "Instructeur en programmation — Web, JavaScript & bases Java",
+        "description": "Conception et animation d'un programme de révision en ligne multi-sessions en fondamentaux du web et de Java pour un groupe d'environ 20 étudiants. Sessions structurées autour des concepts de programmation de base, couvrant HTML/CSS, JavaScript, la syntaxe Java et les principes orientés objet, avec des exercices pratiques adaptés à la préparation aux examens."
+      },
+      "hackathon": {
+        "year": "Mars 2025",
+        "title": "Co-organisateur de hackathon — Initiative nouveaux étudiants en info (UQAM)",
+        "description": "Aide à l'organisation d'un hackathon pour les nouveaux étudiants en informatique à l'UQAM, en contribuant à la logistique, à la coordination des participants et à la création d'un environnement accueillant pour les étudiants de première année qui découvrent la tech."
+      },
+      "codyssey": {
+        "year": "Mars 2025",
+        "title": "Fondateur & chef de projet Codyssey (Micro Club IT)",
+        "description": "Fondateur de Codyssey, une initiative éducative au sein de Micro Club — le plus grand club informatique d'Algérie — créant une branche dédiée où les étudiants produisent et expliquent du contenu de cours technique pour soutenir l'apprentissage entre pairs. Collaboration étroite avec le responsable du département IT pour structurer le projet, coordonner les contributeurs et accompagner sa croissance."
+      },
+      "ideathon": {
+        "year": "Novembre 2023",
+        "title": "Lauréat d'idéathon — Plateforme d'aide en cas de catastrophe",
+        "description": "Direction d'une équipe jusqu'à la première place d'un idéathon universitaire, en présentant une plateforme communautaire pour localiser et aider les personnes touchées par une catastrophe avec une aide essentielle. Compétition face à plusieurs équipes, présentation d'un concept fonctionnel avec une architecture technique définie et un potentiel d'impact concret."
+      }
+    }
   }
 }

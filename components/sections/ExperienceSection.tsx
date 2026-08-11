@@ -6,6 +6,9 @@ import {
   type Experience,
   type ExperienceLink,
 } from "@/lib/experienceData";
+import { useTranslation } from "@/lib/i18n/LanguageProvider";
+
+type ExperienceItemId = keyof typeof import("@/messages/en.json")["experience"]["items"];
 
 function renderDescriptionWithLinks(
   description: string,
@@ -68,15 +71,23 @@ function renderDescriptionWithLinks(
   );
 }
 
-function ExperienceDescription({ exp }: { exp: Experience }) {
+function ExperienceDescription({
+  description,
+  links,
+}: {
+  description: string;
+  links?: ExperienceLink[];
+}) {
   return (
     <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-      {renderDescriptionWithLinks(exp.description, exp.links)}
+      {renderDescriptionWithLinks(description, links)}
     </p>
   );
 }
 
 export default function ExperienceSection() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="experience"
@@ -102,7 +113,7 @@ export default function ExperienceSection() {
               animation: "experienceTitleReveal 1s ease-out forwards, gradientTextShift 5s ease-in-out 1s infinite",
             }}
           >
-            Experience
+            {t.experience.title}
           </h2>
 
           {/* git log style timeline */}
@@ -115,28 +126,32 @@ export default function ExperienceSection() {
               }}
             />
 
-            {experiences.map((exp, index) => (
-              <div key={index} className="relative flex gap-4 sm:gap-6 mb-6 sm:mb-8 last:mb-0 group">
-                {/* Circle node */}
-                <div className="relative z-10 flex-shrink-0">
-                  <div
-                    className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-sky-400/80 bg-slate-800 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.5)] group-hover:border-sky-300"
-                    style={{
-                      boxShadow: "0 0 0 4px rgba(30, 41, 59, 0.8)",
-                    }}
-                  >
-                    <div className="w-2 h-2 rounded-full bg-sky-400 group-hover:bg-sky-300" />
+            {experiences.map((exp: Experience) => {
+              const item = t.experience.items[exp.id as ExperienceItemId];
+
+              return (
+                <div key={exp.id} className="relative flex gap-4 sm:gap-6 mb-6 sm:mb-8 last:mb-0 group">
+                  {/* Circle node */}
+                  <div className="relative z-10 flex-shrink-0">
+                    <div
+                      className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-sky-400/80 bg-slate-800 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.5)] group-hover:border-sky-300"
+                      style={{
+                        boxShadow: "0 0 0 4px rgba(30, 41, 59, 0.8)",
+                      }}
+                    >
+                      <div className="w-2 h-2 rounded-full bg-sky-400 group-hover:bg-sky-300" />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 pt-1 pb-4 pl-0 sm:pl-2 min-w-0">
+                    <span className="text-sky-400 font-mono text-xs sm:text-sm">{item.year}</span>
+                    <h3 className="text-lg sm:text-xl font-semibold text-slate-200 mt-1 mb-2">{item.title}</h3>
+                    <ExperienceDescription description={item.description} links={exp.links} />
                   </div>
                 </div>
-
-                {/* Content */}
-                <div className="flex-1 pt-1 pb-4 pl-0 sm:pl-2 min-w-0">
-                  <span className="text-sky-400 font-mono text-xs sm:text-sm">{exp.year}</span>
-                  <h3 className="text-lg sm:text-xl font-semibold text-slate-200 mt-1 mb-2">{exp.title}</h3>
-                  <ExperienceDescription exp={exp} />
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
