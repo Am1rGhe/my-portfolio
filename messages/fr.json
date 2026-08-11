@@ -9,60 +9,195 @@
     "fallbackInitials": "AG",
     "paragraphs": [
       [
-        { "text": "Je suis ", "style": "normal" },
-        { "text": "développeur full-stack", "style": "strong" },
-        { "text": " et étudiant en génie logiciel à ", "style": "normal" },
-        { "text": "l'UQAM", "style": "accent" },
-        { "text": ". Je construis actuellement des ", "style": "normal" },
-        { "text": "applications de niveau production", "style": "strong" },
-        { "text": " utilisées par de vrais clients. Chez ", "style": "normal" },
-        { "text": "Galeries L'Original", "style": "accent" },
-        { "text": ", je livre des fonctionnalités pour deux plateformes en ligne — un produit d'art sur mesure et une marketplace desservant les galeries du ", "style": "normal" },
-        { "text": "Vieux-Port", "style": "strong" },
-        { "text": " et du ", "style": "normal" },
-        { "text": "Plateau", "style": "strong" },
-        { "text": " à Montréal — en travaillant avec ", "style": "normal" },
-        { "text": "Next.js App Router", "style": "accent" },
-        { "text": ", des flux de données côté serveur et des intégrations typées en TypeScript.", "style": "normal" }
+        {
+          "text": "Je suis ",
+          "style": "normal"
+        },
+        {
+          "text": "développeur full-stack",
+          "style": "strong"
+        },
+        {
+          "text": " et étudiant en génie logiciel à ",
+          "style": "normal"
+        },
+        {
+          "text": "l'UQAM",
+          "style": "accent"
+        },
+        {
+          "text": ". Je construis actuellement des ",
+          "style": "normal"
+        },
+        {
+          "text": "applications de niveau production",
+          "style": "strong"
+        },
+        {
+          "text": " utilisées par de vrais clients. Chez ",
+          "style": "normal"
+        },
+        {
+          "text": "Galeries L'Original",
+          "style": "accent"
+        },
+        {
+          "text": ", je livre des fonctionnalités pour deux plateformes en ligne — un produit d'art sur mesure et une marketplace desservant les galeries du ",
+          "style": "normal"
+        },
+        {
+          "text": "Vieux-Port",
+          "style": "strong"
+        },
+        {
+          "text": " et du ",
+          "style": "normal"
+        },
+        {
+          "text": "Plateau",
+          "style": "strong"
+        },
+        {
+          "text": " à Montréal — en travaillant avec ",
+          "style": "normal"
+        },
+        {
+          "text": "Next.js App Router",
+          "style": "accent"
+        },
+        {
+          "text": ", des flux de données côté serveur et des intégrations typées en TypeScript.",
+          "style": "normal"
+        }
       ],
       [
-        { "text": "J'aborde le logiciel ", "style": "normal" },
-        { "text": "de bout en bout", "style": "strong" },
-        { "text": " : de la création d'interfaces que les gens aiment vraiment utiliser, à la conception de la logique backend et de l'architecture de données qui assure la fiabilité. Je tiens à un ", "style": "normal" },
-        { "text": "code propre", "style": "strong" },
-        { "text": ", à la ", "style": "normal" },
-        { "text": "maintenabilité", "style": "strong" },
-        { "text": ", et à livrer des choses qui fonctionnent en ", "style": "normal" },
-        { "text": "production", "style": "accent" },
-        { "text": " — pas seulement en développement.", "style": "normal" }
+        {
+          "text": "J'aborde le logiciel ",
+          "style": "normal"
+        },
+        {
+          "text": "de bout en bout",
+          "style": "strong"
+        },
+        {
+          "text": " : de la création d'interfaces que les gens aiment vraiment utiliser, à la conception de la logique backend et de l'architecture de données qui assure la fiabilité. Je tiens à un ",
+          "style": "normal"
+        },
+        {
+          "text": "code propre",
+          "style": "strong"
+        },
+        {
+          "text": ", à la ",
+          "style": "normal"
+        },
+        {
+          "text": "maintenabilité",
+          "style": "strong"
+        },
+        {
+          "text": ", et à livrer des choses qui fonctionnent en ",
+          "style": "normal"
+        },
+        {
+          "text": "production",
+          "style": "accent"
+        },
+        {
+          "text": " — pas seulement en développement.",
+          "style": "normal"
+        }
       ],
       [
-        { "text": "Je suis aussi à l'aise avec les ", "style": "normal" },
-        { "text": "outils de développement assistés par l'IA", "style": "strong" },
-        { "text": " (", "style": "normal" },
-        { "text": "Cursor", "style": "accent" },
-        { "text": ", ", "style": "normal" },
-        { "text": "Claude", "style": "accent" },
-        { "text": ") pour accélérer la livraison tout en maintenant la ", "style": "normal" },
-        { "text": "qualité du code", "style": "strong" },
-        { "text": ".", "style": "normal" }
+        {
+          "text": "Je suis aussi à l'aise avec les ",
+          "style": "normal"
+        },
+        {
+          "text": "outils de développement assistés par l'IA",
+          "style": "strong"
+        },
+        {
+          "text": " (",
+          "style": "normal"
+        },
+        {
+          "text": "Cursor",
+          "style": "accent"
+        },
+        {
+          "text": ", ",
+          "style": "normal"
+        },
+        {
+          "text": "Claude",
+          "style": "accent"
+        },
+        {
+          "text": ") pour accélérer la livraison tout en maintenant la ",
+          "style": "normal"
+        },
+        {
+          "text": "qualité du code",
+          "style": "strong"
+        },
+        {
+          "text": ".",
+          "style": "normal"
+        }
       ],
       [
-        { "text": "Au-delà du code, j'ai cofondé ", "style": "normal" },
-        { "text": "Codyssey", "style": "accent" },
-        { "text": " — une initiative éducative au sein du plus grand club informatique d'Algérie — et j'ai tutoré des pairs en bases de données et fondamentaux du web, en plus d'avoir aidé à organiser un hackathon pour les nouveaux étudiants en informatique à l'UQAM.", "style": "normal" }
+        {
+          "text": "Au-delà du code, j'ai cofondé ",
+          "style": "normal"
+        },
+        {
+          "text": "Codyssey",
+          "style": "accent"
+        },
+        {
+          "text": " — une initiative éducative au sein du plus grand club informatique d'Algérie — et j'ai tutoré des pairs en bases de données et fondamentaux du web, en plus d'avoir aidé à organiser un hackathon pour les nouveaux étudiants en informatique à l'UQAM.",
+          "style": "normal"
+        }
       ]
     ],
     "quote": [
-      { "text": "Quand je m'éloigne du clavier, vous me trouverez en ", "style": "normal" },
-      { "text": "randonnée", "style": "strong" },
-      { "text": " — ce qui enseigne les mêmes choses qu'une bonne ingénierie : la ", "style": "normal" },
-      { "text": "patience", "style": "accent" },
-      { "text": ", l'", "style": "normal" },
-      { "text": "adaptabilité", "style": "accent" },
-      { "text": ", et ", "style": "normal" },
-      { "text": "anticiper de quelques pas", "style": "accent" },
-      { "text": ".", "style": "normal" }
+      {
+        "text": "Quand je m'éloigne du clavier, vous me trouverez en ",
+        "style": "normal"
+      },
+      {
+        "text": "randonnée",
+        "style": "strong"
+      },
+      {
+        "text": " — ce qui enseigne les mêmes choses qu'une bonne ingénierie : la ",
+        "style": "normal"
+      },
+      {
+        "text": "patience",
+        "style": "accent"
+      },
+      {
+        "text": ", l'",
+        "style": "normal"
+      },
+      {
+        "text": "adaptabilité",
+        "style": "accent"
+      },
+      {
+        "text": ", et ",
+        "style": "normal"
+      },
+      {
+        "text": "anticiper de quelques pas",
+        "style": "accent"
+      },
+      {
+        "text": ".",
+        "style": "normal"
+      }
     ]
   },
   "skills": {
@@ -116,6 +251,68 @@
         "year": "Novembre 2023",
         "title": "Lauréat d'idéathon — Plateforme d'aide en cas de catastrophe",
         "description": "Direction d'une équipe jusqu'à la première place d'un idéathon universitaire, en présentant une plateforme communautaire pour localiser et aider les personnes touchées par une catastrophe avec une aide essentielle. Compétition face à plusieurs équipes, présentation d'un concept fonctionnel avec une architecture technique définie et un potentiel d'impact concret."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "viewAll": "Voir tous les projets",
+    "showHighlighted": "Afficher les projets mis en avant",
+    "showMore": "Voir plus",
+    "showLess": "Voir moins",
+    "seeCode": "Voir le code",
+    "requestCode": "Demander le code",
+    "viewDemo": "Voir la démo",
+    "noPreview": "Pas d'aperçu",
+    "requestSubjectPrefix": "Demande :",
+    "requestSubjectSuffix": "Code source",
+    "comingSoon": {
+      "badge": "Bientôt disponible",
+      "title": "E-commerce mode – Startup full-stack",
+      "description": "Un site e-commerce de mode full-stack réel pour une startup. Construit avec Next.js, Tailwind CSS et Supabase en configurant sa propre base de données. Bientôt disponible.",
+      "status": "En développement",
+      "release": "Sortie : 7 mars 2026 à 14 h 00"
+    },
+    "items": {
+      "1": {
+        "title": "Application de prise de notes",
+        "description": "Une application de prise de notes prête pour la production, conçue pour un usage quotidien avec une interface épurée et sans distraction. Développée de bout en bout avec React et Supabase, elle offre une authentification sécurisée, une synchronisation en temps réel entre appareils via PostgreSQL, et une mise en page responsive à trois colonnes inspirée d'outils professionnels comme Notion. Les utilisateurs peuvent organiser leur flux de travail avec des tags, une recherche plein texte et une fonctionnalité d'archivage, tandis que la personnalisation des polices garde les notes lisibles sur n'importe quel écran. Des routes protégées et une gestion d'état soignée garantissent la confidentialité des données tout en offrant une expérience rapide et fiable — une démonstration complète de l'auth full-stack, de la conception de bases de données et des patterns React modernes dans un produit cohérent."
+      },
+      "2": {
+        "title": "Sprindo – Gestion de Projet Agile",
+        "description": "Une plateforme full-stack de gestion de projet agile conçue pour permettre aux équipes de planifier des sprints, assigner des tâches et suivre l'avancement au même endroit — réalisée dans le cadre de l'initiative Codyssey. J'ai dirigé le développement du backend Java avec Maven, en mettant en place un pipeline CI/CD et une couverture de tests JUnit complète pour les API REST gérant les projets, la planification de sprints, l'assignation de tâches et les statistiques en temps réel. Le frontend React offre une interface moderne avec des composants réutilisables connectés au backend, tandis qu'un coéquipier a intégré Spring Boot pour relier proprement les deux couches. Déployé sur Vercel, Sprindo reflète la façon dont les vraies équipes livrent du logiciel : séparation claire des responsabilités, discipline des tests et livraison full-stack collaborative entre plusieurs contributeurs."
+      },
+      "3": {
+        "title": "AMIR – Site E-Commerce",
+        "description": "Une vitrine e-commerce entièrement fonctionnelle construite avec React et Vite, conçue pour simuler une expérience d'achat en ligne complète de la navigation au paiement. Le catalogue prend en charge le filtrage par catégorie, le tri et la recherche pour naviguer efficacement parmi les produits, tandis qu'un panier persistant survit aux rafraîchissements via localStorage. L'authentification, un parcours de paiement multi-étapes, la confirmation de commande et l'historique des commandes complètent le parcours acheteur avec validation à chaque étape. Context API centralise l'état de l'application sans dépendances externes, ce qui en fait une base idéale pour comprendre l'architecture React avant de passer à des solutions full-stack avec bases de données et passerelles de paiement. Responsive sur tous les appareils avec une UI claire orientée conversion."
+      },
+      "4": {
+        "title": "Galleria – Diaporama de galerie d'art",
+        "description": "Une expérience de galerie d'art interactive construite entièrement en HTML, CSS et JavaScript vanilla dans le cadre d'un défi Frontend Mentor — en évitant délibérément les frameworks pour démontrer une maîtrise solide des fondamentaux. Quinze œuvres célèbres sont présentées dans une grille masonry style bento saisissante, avec un mode diaporama dédié proposant une navigation suivant/précédent, un indicateur de progression visuelle et une superposition plein écran qui met à jour dynamiquement titres et métadonnées d'artiste. La mise en page est mobile-first et responsive, propulsée par CSS Grid, la délégation d'événements pour une gestion DOM efficace, et des animations keyframe fluides. Une pièce forte de portfolio prouvant la maîtrise des systèmes de layout, des interactions accessibles et de JavaScript ES6 sans s'appuyer sur les abstractions React."
+      },
+      "5": {
+        "title": "Aureus Bank",
+        "description": "Une application bancaire web moderne et interactive conçue en HTML, CSS et JavaScript vanilla — simulant les flux fintech de base dans le navigateur sans backend. Les utilisateurs peuvent s'inscrire et se connecter avec des noms d'utilisateur auto-générés, puis effectuer des dépôts, retraits et transferts peer-to-peer tout en consultant un historique de transactions complet. L'UI phare comprend une carte de crédit 3D avec animation hover-to-flip, un tableau de bord en grille bento, et un convertisseur de devises USD-EUR en direct. Des notifications modales fluides, la validation de formulaires et des mises à jour de solde en temps réel créent une sensation soignée, proche d'une app. Ce projet met en avant le craft CSS créatif, la gestion d'état côté client et un design produit imaginatif en n'utilisant que les fondamentaux du web."
+      },
+      "6": {
+        "title": "Bento Grid – Showcase de gestion des réseaux sociaux",
+        "description": "Une landing page marketing moderne et responsive réalisée dans le cadre d'un défi Frontend Mentor — mettant en avant un outil de gestion des réseaux sociaux propulsé par l'IA à travers une grille bento visuellement frappante. Sept boîtes de contenu asymétriques soulignent les propositions de valeur clés : création de contenu par l'IA, planification de publications, gestion multi-plateformes et analytics de croissance d'audience. Implémentée en HTML et CSS purs avec des zones de grille personnalisées, Flexbox, des propriétés CSS custom et des breakpoints soigneusement réglés pour desktop, tablette et mobile. Le système de marque violet et jaune associé à la typographie DM Sans crée une esthétique cohérente et professionnelle. Démonstration d'un design responsive pixel-perfect et d'une pensée design-system sans aucune dépendance JavaScript."
+      },
+      "7": {
+        "title": "Simulation d'Usine de Production",
+        "description": "Une simulation orientée objet en Java modélisant un atelier de production complet — convoyeurs, machines de traitement et stations spécialisées travaillant ensemble pour transformer les matières premières à travers une chaîne de fabrication. Des produits tels que minerais, poudres et lingots passent de l'extraction par des stations incluant mines, moulins, fours et vendeurs, chacune régie par des recettes configurables. Un système logistique gère le flux des convoyeurs et le routage, tandis que des classes abstraites Station et Machine offrent de l'extensibilité via l'héritage et le polymorphisme. Soutenu par des tests JUnit, le projet démontre une conception OOP rigoureuse, la modélisation métier et une structure test-driven dans un contexte non-UI — idéal pour montrer les fondamentaux de l'informatique au-delà du développement web."
+      },
+      "8": {
+        "title": "Gmail Agent",
+        "description": "Un assistant de boîte de réception intelligent qui se connecte directement à Gmail via Google OAuth, permettant aux utilisateurs de lire, trier et répondre aux e-mails sans changer de contexte. Google Gemini génère des brouillons de réponses contextualisés dans trois tons sélectionnables — Professionnel, Décontracté ou Amical — pour que les réponses correspondent à la situation tout en gagnant du temps de rédaction. Les réponses sont envoyées directement via l'API Gmail, transformant l'app en une véritable couche de productivité plutôt qu'un simple visualiseur. Les sessions utilisateur persistantes et les données sont gérées avec Prisma sur PostgreSQL, sur Next.js 16 avec NextAuth et Tailwind CSS. Le projet démontre la gestion pratique des scopes OAuth2, l'intégration d'API tierces et des workflows assistés par l'IA dans une architecture de style production."
+      },
+      "dydy": {
+        "title": "Dydy Custom",
+        "description": "Une plateforme e-commerce de mode full-stack construite de zéro pour un client indépendant — couvrant solo l'ensemble du cycle de vie du projet, du recueil des besoins et du design UI à la logique backend et au déploiement. Propulsé par Next.js et Tailwind CSS, le site offre une expérience de marque soignée avec des pages Shop, About et Contact dédiées, plus une authentification adaptée à une activité de vêtements sur mesure. Supabase gère les comptes et la persistance des données, tandis que Vercel héberge le déploiement en production servant de vrais clients payants. Ce projet représente la maîtrise de bout en bout d'un produit commercial : architecture soucieuse de la performance, design responsive et UX prête pour le business, conçue pour une marque startup qui entre sur le marché."
+      },
+      "explain-repo": {
+        "title": "Explain My Repo",
+        "description": "Un outil pour développeurs qui transforme n'importe quel dépôt GitHub public en base de connaissances interactive et conversationnelle — il suffit de coller une URL et de demander à Google Gemini ce que fait le code, comment une fonctionnalité spécifique fonctionne, ou par où commencer en tant que nouveau contributeur. Aucun clone local n'est requis : l'application récupère et traite le contexte du dépôt côté serveur, rendant l'onboarding et l'exploration du code nettement plus rapides. Deux modes répondent à des besoins différents — les utilisateurs anonymes bénéficient de sessions ponctuelles pour des questions rapides, tandis que GitHub OAuth débloque un historique de chat persistant avec recherche dans les analyses passées. Construit avec Next.js 16, NextAuth, Prisma sur PostgreSQL, et une interface style ChatGPT avec rendu Markdown complet, il illustre l'intégration de l'IA, l'authentification sécurisée et une UX développeur soignée dans un outil conçu pour de vrais workflows."
       }
     }
   }
