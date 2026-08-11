@@ -1,17 +1,37 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
+
+/** Match CSS meteorShoot path: translate(-120vw, -80vh) */
+const FLIGHT_DX_VW = -120;
+const FLIGHT_DY_VH = -80;
+
+function getFlightRotationDeg() {
+  const dx = (FLIGHT_DX_VW / 100) * window.innerWidth;
+  const dy = (FLIGHT_DY_VH / 100) * window.innerHeight;
+  // Rocket art points up; mirror the path angle so the nose tracks the flight.
+  return (-Math.atan2(-dx, -dy) * 180) / Math.PI;
+}
 
 export default function HeroSection() {
   const { t } = useTranslation();
-  const [showMeteor, setShowMeteor] = useState(false);
-  const [meteorKey, setMeteorKey] = useState(0);
+  const [showRocket, setShowRocket] = useState(false);
+  const [rocketKey, setRocketKey] = useState(0);
+  const [flightRotation, setFlightRotation] = useState(45);
   const sectionRef = useRef<HTMLElement>(null);
   const hasTriggeredRef = useRef(false);
 
   useEffect(() => {
-    const checkAndTriggerMeteor = () => {
+    const updateRotation = () => setFlightRotation(getFlightRotationDeg());
+    updateRotation();
+    window.addEventListener("resize", updateRotation);
+    return () => window.removeEventListener("resize", updateRotation);
+  }, []);
+
+  useEffect(() => {
+    const checkAndTriggerRocket = () => {
       const section = sectionRef.current;
       if (!section || hasTriggeredRef.current) return;
 
@@ -25,8 +45,9 @@ export default function HeroSection() {
         sectionBottom > viewportHeight * 0.2
       ) {
         hasTriggeredRef.current = true;
-        setShowMeteor(true);
-        setMeteorKey((k) => k + 1);
+        setFlightRotation(getFlightRotationDeg());
+        setShowRocket(true);
+        setRocketKey((k) => k + 1);
 
         setTimeout(() => {
           hasTriggeredRef.current = false;
@@ -34,11 +55,11 @@ export default function HeroSection() {
       }
     };
 
-    const initialCheck = setTimeout(checkAndTriggerMeteor, 300);
-    window.addEventListener("scroll", checkAndTriggerMeteor, { passive: true });
+    const initialCheck = setTimeout(checkAndTriggerRocket, 300);
+    window.addEventListener("scroll", checkAndTriggerRocket, { passive: true });
     return () => {
       clearTimeout(initialCheck);
-      window.removeEventListener("scroll", checkAndTriggerMeteor);
+      window.removeEventListener("scroll", checkAndTriggerRocket);
     };
   }, []);
 
@@ -48,36 +69,36 @@ export default function HeroSection() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
-      {/* Meteor */}
-      {showMeteor && (
+      {showRocket && (
         <div
-          key={meteorKey}
+          key={rocketKey}
           className="fixed inset-0 pointer-events-none z-[100] overflow-hidden"
+          aria-hidden
         >
           <div
-            className="absolute origin-center"
+            className="absolute"
             style={{
-              top: "25%",
+              top: "75%",
               left: "105%",
-              width: "180px",
-              animation: "meteorShoot 1.6s ease-out forwards",
+              width: "120px",
+              height: "120px",
+              animation: "meteorShoot 1.8s ease-out forwards",
             }}
           >
             <div
-              className="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-white"
               style={{
-                boxShadow:
-                  "0 0 16px 8px rgba(255,255,255,0.95), 0 0 32px 16px rgba(200,220,255,0.6)",
+                width: "100%",
+                height: "100%",
+                transform: `rotate(${flightRotation}deg)`,
               }}
-            />
-            <div
-              className="absolute left-4 top-1/2 -translate-y-1/2 h-1.5 w-full"
-              style={{
-                background:
-                  "linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 40%, transparent 100%)",
-                filter: "blur(1px)",
-              }}
-            />
+            >
+              <DotLottieReact
+                src="/animations/rocket.json"
+                autoplay
+                loop
+                style={{ width: "100%", height: "100%" }}
+              />
+            </div>
           </div>
         </div>
       )}
