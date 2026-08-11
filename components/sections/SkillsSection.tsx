@@ -3,10 +3,17 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { skillCategories } from "@/lib/skillsData";
+import { useTranslation } from "@/lib/i18n/LanguageProvider";
+
+type SkillCategoryId = keyof typeof import("@/messages/en.json")["skills"]["categories"];
 
 export default function SkillsSection() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState(skillCategories[0].id);
   const activeCategory = skillCategories.find((cat) => cat.id === activeTab);
+
+  const getCategoryLabel = (id: string) =>
+    t.skills.categories[id as SkillCategoryId] ?? id;
 
   return (
     <section
@@ -32,7 +39,7 @@ export default function SkillsSection() {
               backgroundClip: "text",
             }}
           >
-            Skills
+            {t.skills.title}
           </h2>
 
           {/* Tab navbar */}
@@ -47,7 +54,7 @@ export default function SkillsSection() {
                     : "text-slate-400 hover:text-slate-200 hover:bg-slate-600/30 border border-transparent"
                 }`}
               >
-                {cat.label}
+                {getCategoryLabel(cat.id)}
               </button>
             ))}
           </div>

@@ -64,5 +64,14 @@
       { "text": "thinking a few steps ahead", "style": "accent" },
       { "text": ".", "style": "normal" }
     ]
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "frontend": "Front End",
+      "backend": "Backend",
+      "devops": "DevOps",
+      "systems": "Systems & Languages"
+    }
   }
 }
