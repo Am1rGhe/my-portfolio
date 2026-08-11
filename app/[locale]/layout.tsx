@@ -22,12 +22,12 @@ const metadataByLocale: Record<
   en: {
     title: "Amir Ghouari | Software Engineer",
     description:
-      "Portfolio of Amir Ghouari — Full-stack developer and software engineering student at UQAM. Explore my projects, skills, and experience in web development.",
+      "Portfolio of Amir Ghouari — Software engineer and software engineering student at UQAM. Explore my projects, skills, and experience in web development.",
   },
   fr: {
     title: "Amir Ghouari | Ingénieur logiciel",
     description:
-      "Portfolio d'Amir Ghouari — Développeur full-stack et étudiant en génie logiciel à l'UQAM. Découvrez mes projets, compétences et expériences en développement web.",
+      "Portfolio d'Amir Ghouari — Ingénieur logiciel et étudiant en génie logiciel à l'UQAM. Découvrez mes projets, compétences et expériences en développement web.",
   },
 };
 
