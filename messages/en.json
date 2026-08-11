@@ -2,5 +2,67 @@
   "hero": {
     "welcome": "Welcome to my website",
     "name": "Amir Ghouari"
+  },
+  "about": {
+    "title": "About Me",
+    "imageAlt": "Amir Ghouari",
+    "fallbackInitials": "AG",
+    "paragraphs": [
+      [
+        { "text": "I'm a ", "style": "normal" },
+        { "text": "full-stack developer", "style": "strong" },
+        { "text": " and software engineering student at ", "style": "normal" },
+        { "text": "UQAM", "style": "accent" },
+        { "text": ", currently building ", "style": "normal" },
+        { "text": "production-grade applications", "style": "strong" },
+        { "text": " used by real customers. At ", "style": "normal" },
+        { "text": "Galeries L'Original", "style": "accent" },
+        { "text": ", I ship features for two live platforms — a custom art product and a marketplace serving Montréal's ", "style": "normal" },
+        { "text": "Vieux-Port", "style": "strong" },
+        { "text": " and ", "style": "normal" },
+        { "text": "Plateau", "style": "strong" },
+        { "text": " galleries — working across ", "style": "normal" },
+        { "text": "Next.js App Router", "style": "accent" },
+        { "text": ", server-side data flows, and TypeScript-safe integrations.", "style": "normal" }
+      ],
+      [
+        { "text": "I approach software ", "style": "normal" },
+        { "text": "end-to-end", "style": "strong" },
+        { "text": ": from crafting interfaces people actually enjoy using, to designing the backend logic and data architecture that keeps things running reliably. I care about ", "style": "normal" },
+        { "text": "clean code", "style": "strong" },
+        { "text": ", ", "style": "normal" },
+        { "text": "maintainability", "style": "strong" },
+        { "text": ", and shipping things that work in ", "style": "normal" },
+        { "text": "production", "style": "accent" },
+        { "text": " — not just in development.", "style": "normal" }
+      ],
+      [
+        { "text": "I'm also comfortable working with ", "style": "normal" },
+        { "text": "AI-assisted development tools", "style": "strong" },
+        { "text": " (", "style": "normal" },
+        { "text": "Cursor", "style": "accent" },
+        { "text": ", ", "style": "normal" },
+        { "text": "Claude", "style": "accent" },
+        { "text": ") to accelerate delivery while maintaining ", "style": "normal" },
+        { "text": "code quality", "style": "strong" },
+        { "text": ".", "style": "normal" }
+      ],
+      [
+        { "text": "Beyond code, I co-founded ", "style": "normal" },
+        { "text": "Codyssey", "style": "accent" },
+        { "text": " — an educational initiative inside Algeria's largest IT club — and have tutored peers in databases, web fundamentals, and helped organize a hackathon for new CS students at UQAM.", "style": "normal" }
+      ]
+    ],
+    "quote": [
+      { "text": "When I'm away from the keyboard, you'll find me ", "style": "normal" },
+      { "text": "hiking", "style": "strong" },
+      { "text": " — which teaches the same things good engineering does: ", "style": "normal" },
+      { "text": "patience", "style": "accent" },
+      { "text": ", ", "style": "normal" },
+      { "text": "adaptability", "style": "accent" },
+      { "text": ", and ", "style": "normal" },
+      { "text": "thinking a few steps ahead", "style": "accent" },
+      { "text": ".", "style": "normal" }
+    ]
   }
 }

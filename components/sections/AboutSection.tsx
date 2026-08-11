@@ -1,9 +1,53 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/lib/i18n/LanguageProvider";
+
+type TextStyle = "normal" | "strong" | "accent";
+
+type TextPart = {
+  text: string;
+  style: TextStyle;
+};
+
+const styleClassName: Record<TextStyle, string> = {
+  normal: "",
+  strong: "font-semibold text-slate-100",
+  accent: "font-semibold text-sky-300",
+};
+
+function RichText({
+  parts,
+  quote = false,
+}: {
+  parts: TextPart[];
+  quote?: boolean;
+}) {
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (part.style === "normal") {
+          return <span key={index}>{part.text}</span>;
+        }
+
+        const className = quote
+          ? `${styleClassName[part.style]}${part.style === "strong" ? " not-italic" : ""}`
+          : styleClassName[part.style];
+
+        return (
+          <span key={index} className={className}>
+            {part.text}
+          </span>
+        );
+      })}
+    </>
+  );
+}
 
 export default function AboutSection() {
+  const { t } = useTranslation();
   const [imgError, setImgError] = useState(false);
+
   return (
     <section
       id="about"
@@ -32,58 +76,18 @@ export default function AboutSection() {
                 backgroundClip: "text",
               }}
             >
-              About Me
+              {t.about.title}
             </h2>
-            <p className="text-lg text-slate-300 leading-relaxed mb-4">
-              I&apos;m a{" "}
-              <span className="font-semibold text-slate-100">full-stack developer</span>{" "}
-              and software engineering student at{" "}
-              <span className="font-semibold text-sky-300">UQAM</span>, currently
-              building{" "}
-              <span className="font-semibold text-slate-100">
-                production-grade applications
-              </span>{" "}
-              used by real customers. At{" "}
-              <span className="font-semibold text-sky-300">Galeries L&apos;Original</span>
-              , I ship features for two live platforms — a custom art product and
-              a marketplace serving Montréal&apos;s{" "}
-              <span className="font-semibold text-slate-100">Vieux-Port</span> and{" "}
-              <span className="font-semibold text-slate-100">Plateau</span> galleries
-              — working across{" "}
-              <span className="font-semibold text-sky-300">Next.js App Router</span>
-              , server-side data flows, and TypeScript-safe integrations.
-            </p>
-            <p className="text-lg text-slate-300 leading-relaxed mb-4">
-              I approach software{" "}
-              <span className="font-semibold text-slate-100">end-to-end</span>: from
-              crafting interfaces people actually enjoy using, to designing the
-              backend logic and data architecture that keeps things running
-              reliably. I care about{" "}
-              <span className="font-semibold text-slate-100">clean code</span>,{" "}
-              <span className="font-semibold text-slate-100">maintainability</span>
-              , and shipping things that work in{" "}
-              <span className="font-semibold text-sky-300">production</span> — not
-              just in development.
-            </p>
-            <p className="text-lg text-slate-300 leading-relaxed mb-4">
-              I&apos;m also comfortable working with{" "}
-              <span className="font-semibold text-slate-100">
-                AI-assisted development tools
-              </span>{" "}
-              (
-              <span className="font-semibold text-sky-300">Cursor</span>,{" "}
-              <span className="font-semibold text-sky-300">Claude</span>) to
-              accelerate delivery while maintaining{" "}
-              <span className="font-semibold text-slate-100">code quality</span>
-              .
-            </p>
-            <p className="text-lg text-slate-300 leading-relaxed mb-6">
-              Beyond code, I co-founded{" "}
-              <span className="font-semibold text-sky-300">Codyssey</span> — an
-              educational initiative inside Algeria&apos;s largest IT club — and have
-              tutored peers in databases, web fundamentals, and helped organize a
-              hackathon for new CS students at UQAM.
-            </p>
+            {t.about.paragraphs.map((parts, index) => (
+              <p
+                key={index}
+                className={`text-lg text-slate-300 leading-relaxed ${
+                  index === t.about.paragraphs.length - 1 ? "mb-6" : "mb-4"
+                }`}
+              >
+                <RichText parts={parts as TextPart[]} />
+              </p>
+            ))}
             <p
               className="text-slate-300 leading-relaxed pl-4 border-l-2 border-sky-400/50 italic"
               style={{
@@ -91,15 +95,7 @@ export default function AboutSection() {
                   "linear-gradient(90deg, rgba(56, 189, 248, 0.06) 0%, transparent 100%)",
               }}
             >
-              When I&apos;m away from the keyboard, you&apos;ll find me{" "}
-              <span className="font-semibold text-slate-100 not-italic">hiking</span>{" "}
-              — which teaches the same things good engineering does:{" "}
-              <span className="font-semibold text-sky-300">patience</span>,{" "}
-              <span className="font-semibold text-sky-300">adaptability</span>, and{" "}
-              <span className="font-semibold text-sky-300">
-                thinking a few steps ahead
-              </span>
-              .
+              <RichText parts={t.about.quote as TextPart[]} quote />
             </p>
           </div>
 
@@ -108,12 +104,12 @@ export default function AboutSection() {
             <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-2xl transition-all duration-500 cursor-pointer hover:shadow-[0_0_50px_rgba(147,197,253,0.6),0_0_100px_rgba(96,165,250,0.3)] hover:scale-[1.02] overflow-hidden bg-slate-700/30">
               {imgError ? (
                 <div className="w-full h-full flex items-center justify-center text-slate-400 text-5xl font-bold rounded-2xl">
-                  AG
+                  {t.about.fallbackInitials}
                 </div>
               ) : (
                 <img
                   src="/images/profile/porfilePic.jpg"
-                  alt="Amir Ghouari"
+                  alt={t.about.imageAlt}
                   className="w-full h-full object-cover rounded-2xl transition-all duration-500 hover:brightness-110"
                   onError={() => setImgError(true)}
                 />

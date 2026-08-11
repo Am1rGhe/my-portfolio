@@ -2,5 +2,67 @@
   "hero": {
     "welcome": "Bienvenue sur mon site",
     "name": "Amir Ghouari"
+  },
+  "about": {
+    "title": "À propos",
+    "imageAlt": "Amir Ghouari",
+    "fallbackInitials": "AG",
+    "paragraphs": [
+      [
+        { "text": "Je suis ", "style": "normal" },
+        { "text": "développeur full-stack", "style": "strong" },
+        { "text": " et étudiant en génie logiciel à ", "style": "normal" },
+        { "text": "l'UQAM", "style": "accent" },
+        { "text": ". Je construis actuellement des ", "style": "normal" },
+        { "text": "applications de niveau production", "style": "strong" },
+        { "text": " utilisées par de vrais clients. Chez ", "style": "normal" },
+        { "text": "Galeries L'Original", "style": "accent" },
+        { "text": ", je livre des fonctionnalités pour deux plateformes en ligne — un produit d'art sur mesure et une marketplace desservant les galeries du ", "style": "normal" },
+        { "text": "Vieux-Port", "style": "strong" },
+        { "text": " et du ", "style": "normal" },
+        { "text": "Plateau", "style": "strong" },
+        { "text": " à Montréal — en travaillant avec ", "style": "normal" },
+        { "text": "Next.js App Router", "style": "accent" },
+        { "text": ", des flux de données côté serveur et des intégrations typées en TypeScript.", "style": "normal" }
+      ],
+      [
+        { "text": "J'aborde le logiciel ", "style": "normal" },
+        { "text": "de bout en bout", "style": "strong" },
+        { "text": " : de la création d'interfaces que les gens aiment vraiment utiliser, à la conception de la logique backend et de l'architecture de données qui assure la fiabilité. Je tiens à un ", "style": "normal" },
+        { "text": "code propre", "style": "strong" },
+        { "text": ", à la ", "style": "normal" },
+        { "text": "maintenabilité", "style": "strong" },
+        { "text": ", et à livrer des choses qui fonctionnent en ", "style": "normal" },
+        { "text": "production", "style": "accent" },
+        { "text": " — pas seulement en développement.", "style": "normal" }
+      ],
+      [
+        { "text": "Je suis aussi à l'aise avec les ", "style": "normal" },
+        { "text": "outils de développement assistés par l'IA", "style": "strong" },
+        { "text": " (", "style": "normal" },
+        { "text": "Cursor", "style": "accent" },
+        { "text": ", ", "style": "normal" },
+        { "text": "Claude", "style": "accent" },
+        { "text": ") pour accélérer la livraison tout en maintenant la ", "style": "normal" },
+        { "text": "qualité du code", "style": "strong" },
+        { "text": ".", "style": "normal" }
+      ],
+      [
+        { "text": "Au-delà du code, j'ai cofondé ", "style": "normal" },
+        { "text": "Codyssey", "style": "accent" },
+        { "text": " — une initiative éducative au sein du plus grand club informatique d'Algérie — et j'ai tutoré des pairs en bases de données et fondamentaux du web, en plus d'avoir aidé à organiser un hackathon pour les nouveaux étudiants en informatique à l'UQAM.", "style": "normal" }
+      ]
+    ],
+    "quote": [
+      { "text": "Quand je m'éloigne du clavier, vous me trouverez en ", "style": "normal" },
+      { "text": "randonnée", "style": "strong" },
+      { "text": " — ce qui enseigne les mêmes choses qu'une bonne ingénierie : la ", "style": "normal" },
+      { "text": "patience", "style": "accent" },
+      { "text": ", l'", "style": "normal" },
+      { "text": "adaptabilité", "style": "accent" },
+      { "text": ", et ", "style": "normal" },
+      { "text": "anticiper de quelques pas", "style": "accent" },
+      { "text": ".", "style": "normal" }
+    ]
   }
 }
