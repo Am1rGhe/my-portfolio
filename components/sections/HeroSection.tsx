@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 export default function HeroSection() {
+  const { t } = useTranslation();
   const [showMeteor, setShowMeteor] = useState(false);
   const [meteorKey, setMeteorKey] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
@@ -92,7 +94,7 @@ export default function HeroSection() {
             animation: "gradientTextShift 4s ease-in-out infinite",
           }}
         >
-          Welcome to my website
+          {t.hero.welcome}
         </p>
         <h1
           className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight"
@@ -107,7 +109,7 @@ export default function HeroSection() {
               "gradientTextShift 6s ease-in-out infinite, textGlow 3s ease-in-out infinite",
           }}
         >
-          Amir Ghouari
+          {t.hero.name}
         </h1>
       </div>
     </section>

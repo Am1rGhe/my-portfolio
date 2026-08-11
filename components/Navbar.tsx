@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const STAR_COUNT = 25;
 const navLinks = [
@@ -109,7 +110,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
             <div className="md:hidden w-10" aria-hidden />
 
-            <div className="hidden md:flex items-center justify-center flex-1">
+            <div className="hidden md:flex items-center justify-center flex-1 gap-4">
               <div className="flex items-center space-x-1">
                 {navLinks.map((link) => (
                   <a
@@ -122,24 +123,28 @@ export default function Navbar() {
                   </a>
                 ))}
               </div>
+              <LanguageSwitcher />
             </div>
 
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen((open) => !open)}
-              className="md:hidden relative z-20 p-2 rounded-lg text-white/90 hover:text-white hover:bg-white/10 transition-colors"
-              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={mobileMenuOpen}
-              aria-controls="mobile-sidebar"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {mobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
+            <div className="md:hidden flex items-center gap-2">
+              <LanguageSwitcher />
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen((open) => !open)}
+                className="relative z-20 p-2 rounded-lg text-white/90 hover:text-white hover:bg-white/10 transition-colors"
+                aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={mobileMenuOpen}
+                aria-controls="mobile-sidebar"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {mobileMenuOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
