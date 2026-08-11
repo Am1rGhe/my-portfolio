@@ -321,5 +321,13 @@
     "subtitle": "I'm always open to new opportunities and interesting conversations. Feel free to reach out.",
     "copied": "Copied",
     "footer": "Let's connect"
+  },
+  "resume": {
+    "title": "CV",
+    "subtitle": "Download my CV in your preferred language",
+    "download": "Download CV",
+    "english": "English",
+    "french": "French",
+    "back": "← Back"
   }
 }

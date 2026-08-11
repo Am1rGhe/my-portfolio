@@ -321,5 +321,13 @@
     "subtitle": "Je suis toujours ouvert aux nouvelles opportunités et aux discussions intéressantes. N'hésitez pas à me écrire.",
     "copied": "Copié",
     "footer": "Restons en contact"
+  },
+  "resume": {
+    "title": "CV",
+    "subtitle": "Téléchargez mon CV dans la langue de votre choix",
+    "download": "Télécharger le CV",
+    "english": "Anglais",
+    "french": "Français",
+    "back": "← Retour"
   }
 }

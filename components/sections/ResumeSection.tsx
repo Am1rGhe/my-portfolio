@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { resumeLinks } from "@/lib/resumeData";
+import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 function DownloadIcon({ className }: { className?: string }) {
   return (
@@ -15,6 +16,7 @@ function DownloadIcon({ className }: { className?: string }) {
 }
 
 export default function ResumeSection() {
+  const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -41,10 +43,10 @@ export default function ResumeSection() {
               backgroundClip: "text",
             }}
           >
-            CV
+            {t.resume.title}
           </h2>
           <p className="text-slate-400 text-base sm:text-lg mb-8 md:mb-12">
-            Download my CV in your preferred language
+            {t.resume.subtitle}
           </p>
 
           {/* Download button */}
@@ -59,7 +61,7 @@ export default function ResumeSection() {
                   className="group flex items-center justify-center gap-3 px-10 py-5 rounded-xl bg-slate-800/60 border-2 border-slate-600/50 text-slate-200 font-semibold text-lg transition-all duration-300 hover:border-sky-500/70 hover:bg-sky-500/20 hover:text-white hover:shadow-[0_0_40px_rgba(56,189,248,0.25)]"
                 >
                   <DownloadIcon className="w-6 h-6 group-hover:animate-bounce" />
-                  <span>Download CV</span>
+                  <span>{t.resume.download}</span>
                 </motion.button>
               ) : (
                 <motion.div
@@ -79,7 +81,7 @@ export default function ResumeSection() {
                     transition={{ delay: 0.1, duration: 0.4 }}
                     className="flex-1 flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-800/60 border-2 border-slate-600/50 text-slate-200 font-medium transition-all duration-300 hover:border-sky-500/70 hover:bg-sky-500/20 hover:text-white hover:shadow-[0_0_30px_rgba(56,189,248,0.2)]"
                   >
-                    English
+                    {t.resume.english}
                   </motion.a>
                   <motion.a
                     href={resumeLinks.french}
@@ -90,7 +92,7 @@ export default function ResumeSection() {
                     transition={{ delay: 0.2, duration: 0.4 }}
                     className="flex-1 flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-800/60 border-2 border-slate-600/50 text-slate-200 font-medium transition-all duration-300 hover:border-sky-500/70 hover:bg-sky-500/20 hover:text-white hover:shadow-[0_0_30px_rgba(56,189,248,0.2)]"
                   >
-                    French
+                    {t.resume.french}
                   </motion.a>
                 </motion.div>
               )}
@@ -104,7 +106,7 @@ export default function ResumeSection() {
                 onClick={() => setIsExpanded(false)}
                 className="text-slate-500 text-sm hover:text-slate-300 transition-colors mt-2"
               >
-                ← Back
+                {t.resume.back}
               </motion.button>
             )}
           </div>
